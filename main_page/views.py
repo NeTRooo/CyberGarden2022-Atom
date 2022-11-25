@@ -10,12 +10,13 @@ import threading
 
 def main_page(request):
     return render(request, 'main_page/main_page.html')
-<<<<<<< HEAD
 
 def forms_page(request):
     return render(request, 'main_page/forms.html')
 
 def quiz_page(request):
     return render(request, 'main_page/quiz.html')
-=======
->>>>>>> 22b4b0c41a80199f62f2754ee0bc0821bf107e05
+
+class VideoCamera(object):
+    def __init__(self):
+        self.video = cv2.VideoCapture(0)
