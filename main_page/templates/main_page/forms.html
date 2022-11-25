@@ -2,16 +2,16 @@
 {% load static %}
 {% load socialaccount %}
 
-{% block title %}Главная | "Название приложения"{% endblock  %}
+{% block title %}Форма | "Название приложения"{% endblock  %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{% static 'main_page/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main_page/css/forms.css' %}">
 {% endblock %}
 
 {% block content %}
     <div class="page_transition">
+        <a href="/"><img src="{% static 'main_page/img/svg/Ellipse_mini.svg' %}"></a>
         <a href="#"><img src="{% static 'main_page/img/svg/Ellipse_big.svg' %}"></a>
-        <a href="/forms"><img src="{% static 'main_page/img/svg/Ellipse_mini.svg' %}"></a>
         <a href="/quiz"><img src="{% static 'main_page/img/svg/Ellipse_mini.svg' %}"></a>
     </div>
 {% endblock %}

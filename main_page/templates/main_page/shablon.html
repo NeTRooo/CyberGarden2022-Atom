@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
     <link rel="shortcut icon" type="image/png" href="{% static 'main_page/img/svg/favicon.svg' %}">
-    <link rel="stylesheet" href="{% static 'main_page/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main_page/css/styles.css' %}">
     {% block styles %}
     {% endblock %}
 </head>
 <body>
     <div class="nav">
-        
+        <img src="{% static 'main_page/img/greenatom_logo.png' %}">
     </div>
     <div class="content">
         {% block content %}

@@ -1,0 +1,17 @@
+{% extends 'main_page/shablon.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}Quiz | "Название приложения"{% endblock  %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main_page/css/quiz.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="page_transition">
+        <a href="/"><img src="{% static 'main_page/img/svg/Ellipse_mini.svg' %}"></a>
+        <a href="/forms"><img src="{% static 'main_page/img/svg/Ellipse_mini.svg' %}"></a>
+        <a href="#"><img src="{% static 'main_page/img/svg/Ellipse_big.svg' %}"></a>
+    </div>
+{% endblock %}
