@@ -3,11 +3,10 @@ from django.http import HttpRequest, HttpResponse, JsonResponse, HttpResponseRed
 from django.contrib.auth import logout
 import json
 import requests
+from django.views.decorators import gzip
+from django.http import StreamingHttpResponse
 import cv2
+import threading
 
 def main_home(request):
     return render(request, 'main_page/main_page.html')
-
-class VideoCamera(object):
-    def __init__(self):
-        self.video = cv2.VideoCapture(0)
