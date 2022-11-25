@@ -17,20 +17,13 @@ h5,.h5{font-size:24px;line-height:30px;font-weight:500;cursor:default;}h6,.h6{fo
 :root{
     --BG_0:#FFF;
     --BG_1:#000;
-    --BG_2:#004CFF;
-    --BG_3:#E6EEFF;
-    --BG_4:#91B2FF;
+    --BG_2:#025EA1;
     --TC_0:#FFF;
     --TC_1:#000;
-    --TC_2:#71757D;
-    --TC_3:#2E6CFF;
-    --TC_4:#5265f6;
-    --TC_5:#03c2fc;
-    --TC_6:#900ee7;
 }
 /* Buttons */
 .button{align-self:center;padding:16px 24px;border-radius:10px;background-color:var(--BG_2);color:var(--TC_0);border:1px solid var(--BG_2);}
 /* Shablon */
-.nav{width:100%;max-height:122px;padding-left:13px;padding-top:13px;}
+.nav{width:100%;max-height:122px;padding:13px;display:flex;justify-content:space-between;}
 .nav img{max-height:96px;}
-.content{min-width:100%;display:flex;justify-content:center}
+.content{min-width:100%;display:flex;justify-content:center;align-items:center;}
