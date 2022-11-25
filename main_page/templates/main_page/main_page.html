@@ -1,0 +1,18 @@
+{% extends 'main_page/shablon.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}Главная | "Название приложения"{% endblock  %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main_page/css/main.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>ТестТестТестТестТест</h1>
+    {% if user.is_authenticated %}
+        <p>Здравствуйте {{ user.username }} !</p>
+    {% else %}
+        <a href="{% provider_login_url 'github' %}">Авторизоваться</a>
+    {% endif %}
+{% endblock %}
