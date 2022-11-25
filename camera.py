@@ -5,6 +5,7 @@ import numpy as np
 import time
 import os
 import random
+import time
 
 
 
@@ -39,22 +40,26 @@ def gen(camera):
 
     face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
-    per_r = '10' + '%'
+
     font = cv2.FONT_HERSHEY_COMPLEX
     percent_choise = 0
+    a = [random.randrange(70, 100) for i in range(0, 20)]
     while True:
 
         ret, frame = video.read()
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        faces = face_cascade.detectMultiScale(gray, 1.1, 4)
-
-
+        faces = face_cascade.detectMultiScale(gray, 1.1, 100)
+        rand_perc = str(random.randrange(1, 100))
+        i = 0
         for (x, y, z, h) in faces:
             percent_choise+=1
             cv2.rectangle(frame, (x, y), (x + z, y + h), (255, 0, 0), 2)
-            if percent_choise < 50:
-                continue
-            cv2.putText(frame, (f"Сходство с junior-разработчиком:{per_r}"),(10,500), font, 1.5,(255,255,255),2,cv2.LINE_AA)
+
+            if percent_choise < 100:
+                cv2.putText(frame, (f"junior-разработчик:{rand_perc}%"), (x, y), font, 0.7, (255, 255, 255), 2, cv2.LINE_AA)
+            else:
+                i += 1
+                cv2.putText(frame, (f"junior-разработчик:{a[i]}%"),(x-6,y-6), font, 0.7,(255,255,255),2,cv2.LINE_AA)
 
         x, imag = cv2.imencode('.jpg', frame)
 
