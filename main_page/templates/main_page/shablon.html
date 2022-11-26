@@ -7,18 +7,25 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="shortcut icon" type="image/png" href="{% static 'main_page/img/svg/favicon.svg' %}">
     <link rel="stylesheet" href="{% static 'main_page/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'main_page/css/preloader.css' %}">
     {% block styles %}
     {% endblock %}
 </head>
 <body>
+    {% block greenlabs %}
+    {% endblock %}
     <div class="nav">
-        <img src="{% static 'main_page/img/greenatom_logo.png' %}">
-        {% block greenlabs %}
-        {% endblock %}
+        <a href="https://www.rosatom.ru/"><img src="{% static 'main_page/img/greenatom_logo.png' %}"></a>
+        <a href="/"><p class="h4">Главная</p></a>
+        <a href="/"><p class="h4">Рейтинг</p></a>
+        <a href="/"><p class="h4">Квиз</p></a>
+        <a href="/"><p class="h4">Секретное задание</p></a>
+        <a href="/"><p class="h4">Трудоустройство</p></a>
     </div>
     <div class="content">
         {% block content %}
         {% endblock %}
     </div>
+    <script src="{% static 'main_page/js/preloader.js' %}"></script>
 </body>
 </html>

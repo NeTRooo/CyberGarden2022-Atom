@@ -25,8 +25,10 @@ h5,.h5{font-size:24px;line-height:30px;font-weight:500;cursor:default;}h6,.h6{fo
 /* Buttons */
 .button{align-self:center;padding:16px 24px;border-radius:10px;background-color:var(--BG_2);color:var(--TC_0);border:1px solid var(--BG_2);}
 /* Shablon */
-.nav{width:100%;max-height:122px;padding:13px;display:flex;justify-content:space-between;}
-.nav img{max-height:96px;}
+.nav{width:100%;max-height:116px;padding:13px;display:flex;justify-content:space-between;}
+.nav a img{max-height:90px;}.nav{display:flex;align-items:center;color:var(--TC_0);}
+.nav:hover{background-color:#545454;}
 .content{min-width:100%;display:flex;justify-content:center;align-items:center;}
 
+body{background:linear-gradient(252.44deg, #26B835 12.02%, #2693AB 62.02%);}
 .sshhit{border-radius:15px; width:1200px;}

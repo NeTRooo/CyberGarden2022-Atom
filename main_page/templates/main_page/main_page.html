@@ -10,16 +10,21 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection@0.0.1/dist/face-landmarks-detection.js"></script>
 {% endblock %}
 
-{% comment %} {% block greenlabs %}
-    <img src="{% static 'main_page/img/greenlab.png' %}">
-{% endblock %} {% endcomment %}
+{% block greenlabs %}
+<div class="preloader">
+    <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path fill="currentColor"
+        d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+      </path>
+    </svg>
+</div>
+{% endblock %}
 
 {% block content %}
     <canvas id="output" class="webcum"></canvas>
     <video id="webcam" playsinline style="visibility: hidden; width: auto; height: auto;"></video>
     <div class="next_page">
         <a href="/quiz/" class="page_a button h3">Пройти викторину</a>
-        <a href="/forms/" class="page_a button h3">Оставить контакты</a>
     </div>
     <script src="{% static 'main_page/js/monitor.js' %}"></script>
 {% endblock %}
