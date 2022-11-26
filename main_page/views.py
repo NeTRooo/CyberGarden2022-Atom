@@ -34,29 +34,28 @@ def forms_page(request):
 def quiz_page(request):
     return render(request, 'main_page/quiz.html')
 
+def rank_page(request):
+    return render(request, 'main_page/rank_page.html')
+
+def secret_page(request):
+    return render(request, 'main_page/secret_page.html')
+
+def send_page(request):
+    return render(request, 'main_page/send_page.html')
+
 class VideoCamera(object):
     def recv(self, frame):
         frm = frame.to_ndarray(format="bgr24")
         return frm
     def __init__(self):
-        # Using OpenCV to capture from device 0. If you have trouble capturing
-        # from a webcam, comment the line below out and use a video file
-        # instead.
         global video
         video = cv2.VideoCapture(0)
-
-        # If you decide to use video.mp4, you must have this file in the folder
-        # as the main.py.
-        # self.video = cv2.VideoCapture('video.mp4')
 
     def __del__(self):
         video.release()
 
     def get_frame(self):
         success, image = video.read()
-        # We are using Motion JPEG, but OpenCV defaults to capture raw images,
-        # so we must encode it into JPEG in order to correctly display the
-        # video stream.
         ret, jpeg = cv2.imencode('.jpg', image)
         return jpeg.tobytes()
 
@@ -95,6 +94,6 @@ def livefe(request):
     try:
         cam = VideoCamera()
         return StreamingHttpResponse(gen(cam), content_type="multipart/x-mixed-replace;boundary=frame")
-    except:  # This is bad! replace it with proper handling
+    except:
         pass
 #a
