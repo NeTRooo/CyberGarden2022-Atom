@@ -1,5 +1,4 @@
 .page_transition{height:42px;width:142px;display:flex;align-items:center;justify-content:space-between;}
-
 .next_page{display:flex;flex-direction:column;margin-top:32px;}
 .page_a{display:block;margin-bottom:64px;background-color:var(--BG_2);}
 .button{padding:24px 32px;border-radius:16px;}
