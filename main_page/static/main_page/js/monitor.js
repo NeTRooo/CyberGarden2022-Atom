@@ -1,7 +1,3 @@
-function setText( text ) {
-            document.getElementById( "status" ).innerText = text;
-        }
-
         function getRandomInt(max) {
           return Math.floor(Math.random() * max);
         }
@@ -99,7 +95,6 @@ function setText( text ) {
             faces.forEach( face => {
                 cnt = cnt + 1;
                 console.log(cnt);
-                setText( `Face Tracking Confidence: ${face.faceInViewConfidence.toFixed( 3 )}` );
 
                 // Draw the bounding box
                 const x1 = face.boundingBox.topLeft[ 0 ];
@@ -151,7 +146,6 @@ function setText( text ) {
                 faceLandmarksDetection.SupportedPackages.mediapipeFacemesh
             );
 
-            setText( "Loaded!" );
 
             trackFace();
         })();

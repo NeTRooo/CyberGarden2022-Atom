@@ -4,7 +4,7 @@
 .page_a{display:block;margin-bottom:64px;background-color:var(--BG_2);}
 .button{padding:24px 32px;border-radius:16px;}
 /* .content{flex-direction:column;} */
-.info{background-image:url(/static/main_page/img/main_back.png);background-repeat:no-repeat;background-size:100% 100%;width:927px;height:554px;}
-.info{margin-top:48px;margin-right:200px;}
+.webcum{position:fixed;top:0;left:0;min-width:100%;height:100%;z-index:-1;}
+.nav{z-index:10;}
 
 
