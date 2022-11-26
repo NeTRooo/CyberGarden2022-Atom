@@ -30,15 +30,38 @@ from django.http import StreamingHttpResponse
 
 import threading
 
+from streamlit_webrtc import webrtc_streamer
+import av
+import cv2
+
+cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 
-class VideoCamera(object):
+class VideoProcessor:
+    def recv(self, frame):
+        frm = frame.to_ndarray(format="bgr24")
+
+        faces = cascade.detectMultiScale(cv2.cvtColor(frm, cv2.COLOR_BGR2GRAY), 1.1, 3)
+
+        for x, y, w, h in faces:
+            cv2.rectangle(frm, (x, y), (x + w, y + h), (0, 255, 0), 3)
+
+        return av.VideoFrame.from_ndarray(frm, format='bgr24')
+
+
+webrtc_streamer(key="key", video_processor_factory=VideoProcessor)
+
+
+'''class VideoCamera(object):
+    def recv(self, frame):
+        frm = frame.to_ndarray(format="bgr24")
+        return frm
     def __init__(self):
         # Using OpenCV to capture from device 0. If you have trouble capturing
         # from a webcam, comment the line below out and use a video file
         # instead.
         global video
-        video = cv2.VideoCapture(0)
+        video = frm
 
         # If you decide to use video.mp4, you must have this file in the folder
         # as the main.py.
@@ -92,4 +115,4 @@ def livefe(request):
         return StreamingHttpResponse(gen(cam), content_type="multipart/x-mixed-replace;boundary=frame")
     except:  # This is bad! replace it with proper handling
         pass
-#a
+#a'''
