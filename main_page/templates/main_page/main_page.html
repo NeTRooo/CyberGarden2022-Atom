@@ -11,14 +11,9 @@
     <img src="{% static 'main_page/img/greenlab.png' %}">
 {% endblock %}
 {% block content %}
+    <div class="info"></div>
     <div class="next_page">
-        <a href="" class="page_a button h3">Пройти викторину</a>
-        <a href="" class="page_a button h3">Оставить контакты</a>
-        <img src="http://127.0.0.1:8000/monitor" class="sshhit" />
-    </div>
-    <div class="page_transition">
-        <a href="#"><img src="{% static 'main_page/img/svg/Ellipse_big.svg' %}"></a>
-        <a href="/forms"><img src="{% static 'main_page/img/svg/Ellipse_mini.svg' %}"></a>
-        <a href="/quiz"><img src="{% static 'main_page/img/svg/Ellipse_mini.svg' %}"></a>
+        <a href="/quiz/" class="page_a button h3">Пройти викторину</a>
+        <a href="/forms/" class="page_a button h3">Оставить контакты</a>
     </div>
 {% endblock %}
