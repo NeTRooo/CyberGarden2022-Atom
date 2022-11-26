@@ -61,3 +61,4 @@ def gen(camera):
 
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + imag.tobytes() + b'\r\n\r\n')
+#a
