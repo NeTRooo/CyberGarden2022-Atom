@@ -14,6 +14,7 @@
     </div>
     <div class="forms_content">
         <div class="content_left">
+            {% csrf_token %}
             <div class="form_name">
                 <img src="{% static 'main_page/img/svg/user.svg' %}">
                 <input type="text">
@@ -34,4 +35,5 @@
             <p>GitHub</p>
         </div>
     </div>
+    {{ form.as_p }}
 {% endblock %}

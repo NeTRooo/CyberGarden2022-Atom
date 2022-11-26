@@ -8,29 +8,31 @@ from django.http import StreamingHttpResponse
 import cv2
 import threading
 import camera
-
-def main_page(request):
-    return render(request, 'main_page/main_page.html')
-
-def forms_page(request):
-    return render(request, 'main_page/forms.html')
-
-def quiz_page(request):
-    return render(request, 'main_page/quiz.html')
-
-import cv2
 import math
 import sys
 import numpy as np
 import time
 import os
 import random
-from django.views.decorators import gzip
-from django.http import StreamingHttpResponse
 
-import threading
+from .forms import *
 
+def main_page(request):
+    return render(request, 'main_page/main_page.html')
 
+def forms_page(request):
+    if request.method == 'POST':
+        form = ContactsForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+        else:
+            print(form.cleaned_data)
+    else:
+        form = ContactsForm()
+        return render(request, 'main_page/forms.html', {'form':form})
+
+def quiz_page(request):
+    return render(request, 'main_page/quiz.html')
 
 class VideoCamera(object):
     def recv(self, frame):
