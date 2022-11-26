@@ -6,14 +6,27 @@
 
 {% block styles %}
     <link rel="stylesheet" href="{% static 'main_page/css/main.css' %}">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.4.0/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection@0.0.1/dist/face-landmarks-detection.js"></script>
+
 {% endblock %}
+
 {% block greenlabs %}
     <img src="{% static 'main_page/img/greenlab.png' %}">
 {% endblock %}
 {% block content %}
+    <canvas id="output"></canvas>
+        <video id="webcam" playsinline style="
+            visibility: hidden;
+            width: auto;
+            height: auto;
+            ">
+        </video>
+        <h1 id="status">Loading...</h1>
     <div class="info"></div>
     <div class="next_page">
         <a href="/quiz/" class="page_a button h3">Пройти викторину</a>
         <a href="/forms/" class="page_a button h3">Оставить контакты</a>
     </div>
+    <script src="{% static 'main_page/js/monitor.js' %}" > </script>
 {% endblock %}
