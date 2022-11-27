@@ -34,7 +34,7 @@ def forms_page(request):
         return render(request, 'main_page/forms.html')
 
 def quiz_page(request):
-    return render(request, 'main_page/quiz.html')
+    return render(request, 'main_page/quiz.html', {"question_text":Quiz})
 
 def lose_page(request):
     return render(request, 'main_page/lose.html')

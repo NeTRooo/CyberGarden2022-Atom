@@ -22,4 +22,4 @@ class Quiz(models.Model):
     questioner_name = models.TextField(verbose_name="имя")
 
     def __str__(self):
-        return self.question_id
+        return self.question_text
