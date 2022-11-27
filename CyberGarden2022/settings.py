@@ -168,6 +168,13 @@ STATICFILES_DIRS = [
 
 SITE_ID = 1
 
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_PORT = 2525
+EMAIL_HOST_USER = "no-reply@greenatom-work.ru"
+EMAIL_HOST_PASSWORD = "XcLJpj1yhkBiNhxLZg0F"
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 

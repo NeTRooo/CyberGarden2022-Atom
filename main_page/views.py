@@ -15,10 +15,12 @@ import time
 import os
 import random
 from .models import Quiz
-
 from .forms import *
+from django.conf import settings
+from django.core.mail import send_mail
 
 def main_page(request):
+    send_mail('Тема', 'Тело письма', settings.EMAIL_HOST_USER, ['dimon.yablonovskiyy@mail.ru'])
     return render(request, 'main_page/main_page.html')
 
 def forms_page(request):
