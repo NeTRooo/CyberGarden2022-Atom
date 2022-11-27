@@ -1,0 +1,21 @@
+{% extends 'main_page/shablon.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}Имя | GreenAtomWork{% endblock  %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main_page/css/win.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="win_name">
+        <p>Вы справились!</p>
+        <p>Ваш результат N sec</p>
+        <p>User</p>
+        <p>Приглашаем Вас, на стажировку <strong>Junior-разработчиком</strong> в компании <spam>РОСАТОМ</smap></p>  
+        <p>Пожалуйста, для дальнейшей связи, укажите,свою почту:</p>
+        <input class="win_email" type="email" id="id_win">
+        <a href="/quiz/"><div class="button"><p>Продолжить</p></div></a>
+    </div>
+{% endblock %}
