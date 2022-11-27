@@ -1,0 +1,17 @@
+{% extends 'main_page/shablon.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}Имя | GreenAtomWork{% endblock  %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main_page/css/name.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="name">
+        <p>Ваше имя:</p>
+        <input type="text" name="name" maxlength="32" minlength="3" required="" id="id_name">
+        <button type="submit" class="button">Сохранить</button>
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'main_page/shablon.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}Имя | GreenAtomWork{% endblock  %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main_page/css/lose.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="name">
+        <p>Вы проиграли :(</p>
+        <a href="/quiz/"><div class="button"><p>Попробовать снова</p></div></a>
+    </div>
+{% endblock %}

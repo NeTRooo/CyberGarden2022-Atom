@@ -14,6 +14,7 @@ import numpy as np
 import time
 import os
 import random
+from .models import *
 
 from .forms import *
 
@@ -34,7 +35,37 @@ def forms_page(request):
         return render(request, 'main_page/forms.html')
 
 def quiz_page(request):
-    return render(request, 'main_page/quiz.html')
+    qwe = Quiz.objects.all()
+    return render(request, 'main_page/quiz.html', {"ask":qwe})
+
+def lose_page(request):
+    return render(request, 'main_page/lose.html')
+
+def win_page(request):
+    if request.method == 'POST':
+        form = NameForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+            return render(request, 'main_page/name.html')
+        else:
+            print(form.cleaned_data)
+            return render(request, 'main_page/name.html')
+    else:
+        form = NameForm()
+        return render(request, 'main_page/name.html', {'form': form})
+
+def name_page(request):
+    if request.method == 'POST':
+        form = NameForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+            return render(request, 'main_page/name.html')
+        else:
+            print(form.cleaned_data)
+            return render(request, 'main_page/name.html')
+    else:
+        form = NameForm()
+        return render(request, 'main_page/name.html', {'form': form})
 
 def rank_page(request):
     return render(request, 'main_page/rank_page.html')

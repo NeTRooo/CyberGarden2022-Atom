@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import UserInfo
+from .models import *
+
 
 #  
 #  configuring the display
@@ -13,8 +14,16 @@ class UserInfoAdmin(admin.ModelAdmin):
     list_editable = ('mast',)
     list_filter = ('mast',)
 
+class QuizAdmin(admin.ModelAdmin):
+    list_display = ('question_id', 'question_text', 'questioner_name')
+    list_display_links = ('question_id', 'question_text', 'questioner_name')
+    search_fields = ('question_id', 'question_text', 'questioner_name')
+    list_editable = ('question_id', 'question_text', 'questioner_name')
+    list_filter = ('question_id', 'question_text', 'questioner_name')
+
 #  
 #  Register model
 #  
 
 admin.site.register(UserInfo, UserInfoAdmin)
+admin.site.register(Quiz)
