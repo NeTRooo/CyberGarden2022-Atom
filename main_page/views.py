@@ -36,6 +36,9 @@ def forms_page(request):
 def quiz_page(request):
     return render(request, 'main_page/quiz.html')
 
+def lose_page(request):
+    return render(request, 'main_page/lose.html')
+
 def name_page(request):
     if request.method == 'POST':
         form = NameForm(request.POST)

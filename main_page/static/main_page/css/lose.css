@@ -1,0 +1,8 @@
+.name{width:1080px;height:690px;display:flex;flex-direction:column;align-items:center;justify-content:center;background-color:#CCC;border-radius:20px;padding:32px;}
+.name p,.name input{font-family:'Inter';font-style:normal;font-weight:900;font-size:75px;line-height:91px;}
+.name input{width:820px;height:148px;}
+.button{filter:drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));background-color:rgba(50, 10, 10, 0.5);border:none;}
+.button{font-family:'Inter';font-style:normal;font-weight:800;font-size:35px;line-height:42px;margin-top:32px;}
+.name input{margin-top:32px;}
+
+.name a div p{font-family:'Inter';font-style:normal;font-weight:800;font-size:50px;line-height:61px;}
