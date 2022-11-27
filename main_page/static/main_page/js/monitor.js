@@ -1,5 +1,5 @@
-function getRandomInt(max) {
-return Math.floor(Math.random() * max);
+function getRandomInt(min, max) { // min and max included
+return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
 function drawLine( ctx, x1, y1, x2, y2 ) {
@@ -61,7 +61,7 @@ function generate_percentage(old_count_people, new_count_people) {
 if (old_count_people != new_count_people){
 percentage = []
 for (let i = 0; i < new_count_people; i++){
-    perc = getRandomInt(100);
+    perc = getRandomInt(70, 100);
     percentage.push(perc);
 }
 for (let i; i < 10000; i++){
