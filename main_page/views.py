@@ -35,7 +35,8 @@ def forms_page(request):
         return render(request, 'main_page/forms.html')
 
 def quiz_page(request):
-    return render(request, 'main_page/quiz.html', {"ask":Quiz})
+    qwe = Quiz.objects.all()
+    return render(request, 'main_page/quiz.html', {"ask":qwe})
 
 def lose_page(request):
     return render(request, 'main_page/lose.html')
