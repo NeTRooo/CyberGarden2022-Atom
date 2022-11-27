@@ -1,0 +1,42 @@
+{% extends 'main_page/shablon.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}Quiz | GreenAtomWork{% endblock  %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main_page/css/quiz.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="quiz_question">
+        <p class="h1">Какие языки обладают компилируемой и интерпретируемой реализацией?</p>
+        <p class="h1">4/5</p>
+    </div>
+
+    <div class="quiz_reply">
+        <a href="/lose/">
+        <div class="_reply">
+            <p class="h1">Python, C, Java</p>
+        </div>
+        </a>
+        <a href="/lose/">
+        <div class="_reply">
+            <p class="h1">JavaScript, C#</p>
+        </div>
+                    </a>
+
+            <a href="/win/">
+        <div class="_reply">
+            <p class="h1">Python, C, Pascal </p>
+        </div>
+                        </a>
+
+                <a href="/lose/">
+        <div class="_reply">
+            <p class="h1">Все перечисленные</p>
+        </div>
+                            </a>
+
+    </div>
+{% endblock %}

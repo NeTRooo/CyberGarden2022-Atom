@@ -1,0 +1,42 @@
+{% extends 'main_page/shablon.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}Quiz | GreenAtomWork{% endblock  %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main_page/css/quiz.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="quiz_question">
+        <p class="h1">Что такое XXE-инъекция?</p>
+        <p class="h1">3/5</p>
+    </div>
+
+    <div class="quiz_reply">
+        <a href="/quiz5/">
+        <div class="_reply">
+            <p class="h1">Внедрение вредоносного кода</p>
+        </div>
+        </a>
+        <a href="/lose/">
+        <div class="_reply">
+            <p class="h1">Стимулирующая инъекция для повышения концентрации внимания</p>
+        </div>
+                    </a>
+
+            <a href="/lose/">
+        <div class="_reply">
+            <p class="h1">Наркотик запрещенный на территории РФ</p>
+        </div>
+                        </a>
+
+                <a href="/lose/">
+        <div class="_reply">
+            <p class="h1">Быстро написанная программистом функция</p>
+        </div>
+                            </a>
+
+    </div>
+{% endblock %}

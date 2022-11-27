@@ -1,0 +1,57 @@
+{% extends 'main_page/shablon.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}Quiz | GreenAtomWork{% endblock  %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main_page/css/quiz.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="quiz_question">
+        <code class="h1">Что выведет программа?</code>
+        <br>
+
+  <p><pre class="mmm">
+      result = 0
+
+      for i in range(3, 8):
+         if i%2 == 0:
+             i += 1
+             result += 2
+         else:
+             i += 2
+             result -= 3<br>
+    </pre></p>
+            <code class="h1">2/5</code>
+
+    </div>
+
+
+    <div class="quiz_reply">
+        <a href="/quiz4/">
+        <div class="_reply">
+            <p class="h1">-5</p>
+        </div>
+        </a>
+        <a href="/lose/">
+        <div class="_reply">
+            <p class="h1">-8</p>
+        </div>
+                    </a>
+
+            <a href="/lose/">
+        <div class="_reply">
+            <p class="h1">3</p>
+        </div>
+                        </a>
+
+                <a href="/lose/">
+        <div class="_reply">
+            <p class="h1">6</p>
+        </div>
+                            </a>
+
+    </div>
+{% endblock %}
