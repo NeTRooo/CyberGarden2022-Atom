@@ -42,17 +42,17 @@ def lose_page(request):
     return render(request, 'main_page/lose.html')
 
 def win_page(request):
-    if request.method == 'POST':
-        form = NameForm(request.POST)
-        if form.is_valid():
-            print(form.cleaned_data)
-            return render(request, 'main_page/name.html')
-        else:
-            print(form.cleaned_data)
-            return render(request, 'main_page/name.html')
-    else:
-        form = NameForm()
-        return render(request, 'main_page/name.html', {'form': form})
+    # if request.method == 'POST':
+    #     form = NameForm(request.POST)
+    #     if form.is_valid():
+    #         print(form.cleaned_data)
+    #         return render(request, 'main_page/name.html')
+    #     else:
+    #         print(form.cleaned_data)
+    #         return render(request, 'main_page/name.html')
+    # else:
+    #     form = NameForm()
+    return render(request, 'main_page/win.html')
 
 def name_page(request):
     if request.method == 'POST':
