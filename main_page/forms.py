@@ -1,4 +1,7 @@
 from django import forms
+from .models import *
+from django.forms import ModelForm
+
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
 
@@ -10,5 +13,7 @@ class ContactsForm(forms.Form):
     programming_lang = forms.CharField(max_length=128, min_length=1,)
     mast = forms.ChoiceField(choices=MAST_CHOICE)
 
-class NameForm(forms.Form):
-    name = forms.CharField(max_length=32, min_length=3,)
+class addQuestionform(ModelForm):
+    class Meta:
+        model=Quiz
+        fields="__all__"
