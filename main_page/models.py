@@ -18,10 +18,6 @@ class UserInfo(models.Model):
         verbose_name = 'Информация о пользователе'
         verbose_name_plural = 'Информация о пользователях'
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cca5ff2cd4197657c899c3ad766dde6323f5afc4
 class Quiz(models.Model):
     question_id = models.IntegerField(verbose_name='Айди вопроса')
     question_text = models.TextField(verbose_name="текст вопроса")
