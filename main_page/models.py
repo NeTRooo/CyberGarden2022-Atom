@@ -12,6 +12,7 @@ class UserInfo(models.Model):
     class Meta:
         verbose_name = 'Информация о пользователе'
         verbose_name_plural = 'Информация о пользователях'
+
 class Quiz(models.Model):
     question_id = models.IntegerField(verbose_name='Айди вопроса')
     question_text = models.TextField(verbose_name="текст вопроса")
@@ -21,5 +22,6 @@ class Quiz(models.Model):
     opt4 = models.TextField(verbose_name="ответ4")
     questioner_name = models.TextField(verbose_name="имя")
 
-    def __str__(self):
-        return self.question_text
+    class Meta:
+        verbose_name = 'Задание'
+        verbose_name_plural = 'Задания'
