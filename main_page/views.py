@@ -25,14 +25,26 @@ def forms_page(request):
         form = ContactsForm(request.POST)
         if form.is_valid():
             print(form.cleaned_data)
+            return render(request, 'main_page/forms.html')
         else:
             print(form.cleaned_data)
+            return render(request, 'main_page/forms.html')
     else:
         form = ContactsForm()
-        return render(request, 'main_page/forms.html', {'form':form})
+        return render(request, 'main_page/forms.html')
 
 def quiz_page(request):
-    return render(request, 'main_page/quiz.html')
+    if request.method == 'POST':
+        form = QuizForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+            return render(request, 'main_page/quiz.html')
+        else:
+            print(form.cleaned_data)
+            return render(request, 'main_page/quiz.html')
+    else:
+        form = QuizForm()
+        return render(request, 'main_page/quiz.html', {'form': form})
 
 def rank_page(request):
     return render(request, 'main_page/rank_page.html')

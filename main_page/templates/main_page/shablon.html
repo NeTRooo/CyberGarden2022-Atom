@@ -15,16 +15,16 @@
     {% endblock %}
     <div class="nav">
         <a href="https://www.rosatom.ru/"><img src="{% static 'main_page/img/greenatom_logo.png' %}"></a>
-        {% url 'main_page' as url_home %}
-        <a href="{% if url_home == request.path %}#{% else %}/{% endif %}"><p class="h4_m {% if url_home == request.path %}_active{% endif %}">Главная</p></a>
-        {% url 'rank_page' as url_rank %}
-        <a href="{% if url_rank == request.path %}#{% else %}/rank{% endif %}"><p class="h4_m {% if url_rank == request.path %}_active{% endif %}">Рейтинг</p></a>
-        {% url 'quiz_page' as url_quiz %}
-        <a href="{% if url_quiz == request.path %}#{% else %}/quiz{% endif %}"><p class="h4_m {% if url_quiz == request.path %}_active{% endif %}">Квиз</p></a>
-        {% url 'secret_page' as url_secret %}
-        <a href="{% if url_secret == request.path %}#{% else %}/secret{% endif %}"><p class="h4_m {% if url_secret == request.path %}_active{% endif %}">Секретное задание</p></a>
         {% url 'forms_page' as url_forms %}
-        <a href="{% if url_forms == request.path %}#{% else %}/forms{% endif %}"><p class="h4_m {% if url_forms == request.path %}_active{% endif %}">Трудоустройство</p></a>
+        <a href="{% if url_forms == request.path %}#{% else %}/forms{% endif %}"><p class="h4_m {% if url_forms == request.path %}_activee{% endif %}">Трудоустройство</p></a>
+        {% comment %} {% url 'rank_page' as url_rank %}
+        <a href="{% if url_rank == request.path %}#{% else %}/rank{% endif %}"><p class="h4_m {% if url_rank == request.path %}_activee{% endif %}">Рейтинг</p></a> {% endcomment %}
+        {% url 'secret_page' as url_secret %}
+        <a href="{% if url_secret == request.path %}#{% else %}/secret{% endif %}"><p class="h4_m {% if url_secret == request.path %}_activee{% endif %}">Секретное задание</p></a>
+        {% url 'quiz_page' as url_quiz %}
+        <a href="{% if url_quiz == request.path %}#{% else %}/quiz{% endif %}"><p class="h4_m {% if url_quiz == request.path %}_activee{% endif %}">Квиз</p></a>
+        {% url 'main_page' as url_home %}
+        <a href="{% if url_home == request.path %}#{% else %}/{% endif %}"><p class="h4_m {% if url_home == request.path %}_activee{% endif %}">Главная</p></a>
     </div>
     <div class="content">
         {% block content %}

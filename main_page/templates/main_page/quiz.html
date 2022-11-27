@@ -9,6 +9,23 @@
 {% endblock %}
 
 {% block content %}
-    <video autoplay></video>
-    <script type="text/javascript" src="{% static 'main_page/js/monitor.js' %}"></script>
+    <div class="quiz_question">
+        <p class="h1">Топовый вопрос1</p>
+        <p class="h1">1/5</p>
+    </div>
+    <div class="quiz_reply">
+        <div class="_reply reply_1">
+            <p class="h1">Ответ1</p>
+        </div>
+        <div class="_reply reply_2">
+            <p class="h1">Ответ2</p>
+        </div>
+        <div class="_reply reply_3">
+            <p class="h1">Ответ3</p>
+        </div>
+        <div class="_reply reply_4">
+            <p class="h1">Ответ4</p>
+        </div>
+    </div>
+    {{ form.as_p }}
 {% endblock %}
