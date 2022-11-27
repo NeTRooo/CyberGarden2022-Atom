@@ -18,15 +18,15 @@
                 {% csrf_token %}
                 <div class="form_name">
                     <img src="{% static 'main_page/img/svg/user.svg' %}">
-                    <input styles="cells" type="text" name="name" maxlength="32" minlength="3" required="" id="id_name">
+                    <input styles="cells" placeholder="имя" type="text" name="name" maxlength="32" minlength="3" required="a" id="id_name">
                 </div>
                 <div class="form_email">
                     <img src="{% static 'main_page/img/svg/email.svg' %}">
-                    <input styles="cells" type="email" name="email" required="" id="id_email">
+                    <input styles="cells" type="email" name="email" required="" id="id_email" placeholder="эл. почта">
                 </div>
                 <div class="form_programmer">
                     <img src="{% static 'main_page/img/svg/code.svg' %}">
-                    <input styles="cells" type="text" name="programming_lang" maxlength="128" minlength="1" required="" id="id_programming_lang">
+                    <input styles="cells" type="text" name="programming_lang" placeholder="языки программирования" maxlength="128" minlength="1" required="" id="id_programming_lang">
                     <select styles="cells" name="mast" id="id_mast">
                         <option value="full">Full-stack developer</option>
                         <option value="front">Frontend developer</option>
@@ -37,11 +37,6 @@
                     <button type="submit" class="button">Сохранить</button>
                 </div>
             </form>
-        </div>
-        <div class="content_github">
-            <img class="git_info" src="{% static 'main_page/img/svg/info.svg' %}">
-            <img src="{% static 'main_page/img/svg/github.svg' %}">
-            <p class="h5">GitHub</p>
         </div>
     </div>
 {% endblock %}
