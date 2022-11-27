@@ -9,7 +9,8 @@
 .ui_14_r{font-size:14px;line-height:22px;font-weight:normal;}.ui_14_m{font-weight:500;font-size:14px;line-height:22px}.ui_14_sb{font-weight:600;font-size:14px;line-height:22px}.ui_14_b{font-weight:700;font-size:14px;line-height:22px}.ui_14_eb{font-weight:800;font-size:14px;line-height:22px}.ui_14_bl{font-weight:900;font-size:14px;line-height:22px}
 .ui_13_r{font-size:13px;line-height:20px;font-weight:normal;}.ui_13_m{font-weight:500;font-size:13px;line-height:20px}.ui_13_sb{font-weight:600;font-size:13px;line-height:20px}.ui_13_b{font-weight:700;font-size:13px;line-height:20px}.ui_13_eb{font-weight:800;font-size:13px;line-height:20px}.ui_13_bl{font-weight:900;font-size:13px;line-height:20px}
 h1,.h1{font-size:40px;line-height:45px;font-weight:700;cursor:default;}h2,.h2{font-size:36px;line-height:42px;font-weight:900;cursor:default;}
-h3,.h3{font-size:32px;line-height:39px;font-weight:700;cursor:default;}h4,.h4{font-size:28px;line-height:39px;font-weight:700;cursor:default;}.h4_m{font-size:32px;line-height:39px;font-weight:500;cursor:default;}
+h3,.h3{font-size:32px;line-height:39px;font-weight:700;cursor:default;}h4,.h4{font-size:28px;line-height:39px;font-weight:700;cursor:default;}
+.h4_m{font-size:32px;line-height:39px;font-weight:500;cursor:default;}
 h5,.h5{font-size:24px;line-height:30px;font-weight:500;cursor:default;}h6,.h6{font-size:18px;line-height:25px;font-weight:700;cursor:default;}
 .h5_eb{font-size:24px;line-height:30px;font-weight:800;cursor:default;}.h5_b{font-weight:700;font-size:28px;line-height:34px;}.h4_b{font-weight:700;font-size:24px;line-height:29px;}
 .ui_left{text-align:left;}.ui_center{text-align:center}.ui_right{text-align:right;}button{cursor:pointer;}

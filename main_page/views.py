@@ -19,9 +19,22 @@ from .forms import *
 from django.conf import settings
 from django.core.mail import send_mail
 
+
 def main_page(request):
     send_mail('Тема', 'Тело письма', settings.EMAIL_HOST_USER, ['dimon.yablonovskiyy@mail.ru'])
     return render(request, 'main_page/main_page.html')
+def forms_page(request):
+    if request.method == 'POST':
+        form = ContactsForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data['email'])
+            send_mail('Тема', 'Тело письма', settings.EMAIL_HOST_USER, [f"{form.cleaned_data['email']}"])
+            return render(request, 'main_page/forms.html')
+        else:
+            return render(request, 'main_page/forms.html')
+    else:
+        form = ContactsForm()
+        return render(request, 'main_page/forms.html')
 
 def forms_page(request):
     if request.method == 'POST':
@@ -36,15 +49,19 @@ def forms_page(request):
         form = ContactsForm()
         return render(request, 'main_page/forms.html')
 
+
 def quiz_page(request):
     qwe1 = Quiz.objects.all()
-    return render(request, 'main_page/quiz.html', {"qwe":qwe1})
+    return render(request, 'main_page/quiz.html', {"qwe": qwe1})
+
 
 def quiz_page2(request):
     return render(request, 'main_page/quiz2.html')
 
+
 def lose_page(request):
     return render(request, 'main_page/lose.html')
+
 
 def win_page(request):
     # if request.method == 'POST':
@@ -59,6 +76,7 @@ def win_page(request):
     #     form = NameForm()
     return render(request, 'main_page/win.html')
 
+
 def name_page(request):
     if request.method == 'POST':
         form = NameForm(request.POST)
@@ -72,19 +90,24 @@ def name_page(request):
         form = NameForm()
         return render(request, 'main_page/name.html', {'form': form})
 
+
 def rank_page(request):
     return render(request, 'main_page/rank_page.html')
+
 
 def secret_page(request):
     return render(request, 'main_page/secret_page.html')
 
+
 def send_page(request):
     return render(request, 'main_page/send_page.html')
+
 
 class VideoCamera(object):
     def recv(self, frame):
         frm = frame.to_ndarray(format="bgr24")
         return frm
+
     def __init__(self):
         global video
         video = cv2.VideoCapture(0)
@@ -117,16 +140,19 @@ def gen(camera):
 
             cv2.rectangle(frame, (x, y), (x + z, y + h), (255, 0, 0), 2)
             if frame_cntr < 100:
-                cv2.putText(frame, f'Вы junior-разработчик на:{random.randrange(0, 100)}%', (x - 6, y), font, 0.7, (255, 255, 255), 2, cv2.LINE_AA)
+                cv2.putText(frame, f'Вы junior-разработчик на:{random.randrange(0, 100)}%', (x - 6, y), font, 0.7,
+                            (255, 255, 255), 2, cv2.LINE_AA)
             else:
                 i += 1
-                cv2.putText(frame, f'Вы junior-разработчик на:{rand_lvl[i]}%', (x - 6, y), font, 0.7, (255, 255, 255), 2, cv2.LINE_AA)
-
+                cv2.putText(frame, f'Вы junior-разработчик на:{rand_lvl[i]}%', (x - 6, y), font, 0.7, (255, 255, 255),
+                            2, cv2.LINE_AA)
 
         x, imag = cv2.imencode('.jpg', frame)
 
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + imag.tobytes() + b'\r\n\r\n')
+
+
 @gzip.gzip_page
 def livefe(request):
     try:
@@ -134,4 +160,4 @@ def livefe(request):
         return StreamingHttpResponse(gen(cam), content_type="multipart/x-mixed-replace;boundary=frame")
     except:
         pass
-#a
+# a

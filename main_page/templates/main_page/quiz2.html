@@ -10,7 +10,17 @@
 
 {% block content %}
     <div class="quiz_question">
-        <p class="h1">Принципы работы ООП?</p>
+        <p class="h1">Принципы работы ООП?<code>
+            result = 0
+            for i in range(3, 8):
+                if i % 2 == 0:
+                    i += 1
+                    result += 2
+                else:
+                    i += 2
+                    result -= 3
+            print(result)
+        </code></p>
         <p class="h1">2/5</p>
     </div>
     <div class="quiz_reply">
