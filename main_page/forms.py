@@ -9,3 +9,6 @@ class ContactsForm(forms.Form):
     email = forms.EmailField()
     programming_lang = forms.CharField(max_length=128, min_length=1,)
     mast = forms.ChoiceField(choices=MAST_CHOICE)
+
+class NameForm(forms.Form):
+    name = forms.CharField(max_length=32, min_length=3,)
