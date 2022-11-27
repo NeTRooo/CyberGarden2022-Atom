@@ -14,7 +14,7 @@ import numpy as np
 import time
 import os
 import random
-from .models import *
+from .models import Quiz
 
 from .forms import *
 
@@ -35,8 +35,8 @@ def forms_page(request):
         return render(request, 'main_page/forms.html')
 
 def quiz_page(request):
-    qwe = Quiz.objects.all()
-    return render(request, 'main_page/quiz.html', {"ask":qwe})
+    qwe1 = Quiz.objects.all()
+    return render(request, 'main_page/quiz.html', {"qwe":qwe1})
 
 def lose_page(request):
     return render(request, 'main_page/lose.html')

@@ -9,13 +9,14 @@
 {% endblock %}
 
 {% block content %}
+    {% for qwe123 in qwe %}
     <div class="quiz_question">
-        <p class="h1">{{ask.question_text}}</p>
+        <p class="h1">{{ qwe123.question_text }}</p>
         <p class="h1">1/5</p>
     </div>
     <div class="quiz_reply">
         <div class="_reply">
-            <p class="h1">{{ask.opt1}}</p>
+            <p class="h1">{{ qwe123.opt1 }}</p>
         </div>
         <div class="_reply">
             <p class="h1">Ответ2</p>
@@ -27,5 +28,5 @@
             <p class="h1">Ответ4</p>
         </div>
     </div>
-    {{ form.as_p }}
+    {% endfor %}
 {% endblock %}
