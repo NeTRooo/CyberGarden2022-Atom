@@ -5,7 +5,7 @@
 ._reply{width:720px;height:200px;background:rgba(84, 84, 84, 0.25);border-radius:16px;padding:48px;display:flex;margin-top:32px;margin-right:32px;align-items:center;justify-content:center;}
 ._reply:hover{border:5px solid #000000;}._reply:active{background:#545454;}
 .quiz_reply{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;}
-
+._hidden{visibility:hidden;display:none;}
 
 
 
