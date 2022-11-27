@@ -15,5 +15,5 @@ class ContactsForm(forms.Form):
 
 class addQuestionform(ModelForm):
     class Meta:
-        model=Quiz
-        fields="__all__"
+        model = Quiz
+        fields = "__all__"

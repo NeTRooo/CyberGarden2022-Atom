@@ -12,6 +12,7 @@ class UserInfo(models.Model):
     mast = models.TextField(verbose_name='Сфера разработки')
     start_time = models.IntegerField(verbose_name='Время начала')
     end_time = models.IntegerField(verbose_name='Время конца')
+    best_time = models.IntegerField(verbose_name='Лучшее время')
     score = models.IntegerField(verbose_name='кол-во очков за тест')
 
     class Meta:
@@ -19,7 +20,7 @@ class UserInfo(models.Model):
         verbose_name_plural = 'Информация о пользователях'
 
 class Quiz(models.Model):
-    question_id = models.IntegerField(verbose_name='Айди вопроса')
+    question_id = models.IntegerField(verbose_name='Айд и вопроса')
     question_text = models.TextField(verbose_name="текст вопроса")
     opt1 = models.TextField(verbose_name="ответ1")
     opt2 = models.TextField(verbose_name="ответ2")
