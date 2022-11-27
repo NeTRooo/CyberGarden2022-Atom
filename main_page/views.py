@@ -39,6 +39,7 @@ def forms_page(request):
 def quiz_page(request):
     qwe1 = Quiz.objects.all()
     return render(request, 'main_page/quiz.html', {"qwe":qwe1})
+
 def quiz_page2(request):
     return render(request, 'main_page/quiz2.html')
 
