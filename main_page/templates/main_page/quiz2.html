@@ -11,30 +11,34 @@
 {% block content %}
     <div class="quiz_question">
         <p class="h1">Принципы работы ООП?<code>
-            result = 0
-            for i in range(3, 8):
-                if i % 2 == 0:
-                    i += 1
-                    result += 2
-                else:
-                    i += 2
-                    result -= 3
-            print(result)
+
         </code></p>
-        <p class="h1">2/5</p>
+        <p class="h1">1/5</p>
     </div>
+
     <div class="quiz_reply">
+        <a href="/lose/">
         <div class="_reply">
             <p class="h1">Наследование</p>
         </div>
+        </a>
+        <a href="/lose/">
         <div class="_reply">
             <p class="h1">Абстракция</p>
         </div>
+                    </a>
+
+            <a href="/lose/">
         <div class="_reply">
             <p class="h1">Преимущества</p>
         </div>
+                        </a>
+
+                <a href="/quiz3/">
         <div class="_reply">
             <p class="h1">Все ответы верны</p>
         </div>
+                            </a>
+
     </div>
 {% endblock %}

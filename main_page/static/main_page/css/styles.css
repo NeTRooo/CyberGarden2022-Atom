@@ -14,6 +14,7 @@ h3,.h3{font-size:32px;line-height:39px;font-weight:700;cursor:default;}h4,.h4{fo
 h5,.h5{font-size:24px;line-height:30px;font-weight:500;cursor:default;}h6,.h6{font-size:18px;line-height:25px;font-weight:700;cursor:default;}
 .h5_eb{font-size:24px;line-height:30px;font-weight:800;cursor:default;}.h5_b{font-weight:700;font-size:28px;line-height:34px;}.h4_b{font-weight:700;font-size:24px;line-height:29px;}
 .ui_left{text-align:left;}.ui_center{text-align:center}.ui_right{text-align:right;}button{cursor:pointer;}
+l1,.l1{font-size:32px;line-height:45px;font-weight:500;cursor:default;}
 /* Colors */
 :root{
     --BG_0:#FFF;

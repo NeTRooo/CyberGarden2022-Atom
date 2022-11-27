@@ -59,6 +59,15 @@ def quiz_page2(request):
     return render(request, 'main_page/quiz2.html')
 
 
+def quiz_page3(request):
+    return render(request, 'main_page/quiz3.html')
+
+def quiz_page4(request):
+    return render(request, 'main_page/quiz4.html')
+
+def quiz_page5(request):
+    return render(request, 'main_page/quiz5.html')
+
 def lose_page(request):
     return render(request, 'main_page/lose.html')
 
