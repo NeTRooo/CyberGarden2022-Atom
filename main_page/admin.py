@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import UserInfo
+from .models import *
+
 
 #  
 #  configuring the display
@@ -17,4 +18,4 @@ class UserInfoAdmin(admin.ModelAdmin):
 #  Register model
 #  
 
-admin.site.register(UserInfo, UserInfoAdmin)
+admin.site.register(UserInfo, UserInfoAdmin, Quiz)
