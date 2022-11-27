@@ -39,6 +39,19 @@ def quiz_page(request):
 def lose_page(request):
     return render(request, 'main_page/lose.html')
 
+def win_page(request):
+    if request.method == 'POST':
+        form = NameForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+            return render(request, 'main_page/name.html')
+        else:
+            print(form.cleaned_data)
+            return render(request, 'main_page/name.html')
+    else:
+        form = NameForm()
+        return render(request, 'main_page/name.html', {'form': form})
+
 def name_page(request):
     if request.method == 'POST':
         form = NameForm(request.POST)
